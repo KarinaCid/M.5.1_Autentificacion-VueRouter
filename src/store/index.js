@@ -1,3 +1,4 @@
+//import { userSetter } from 'core-js/fn/symbol'
 import Vue from 'vue'
 import Vuex from 'vuex'
 
@@ -7,8 +8,14 @@ export default new Vuex.Store({
   state: {
   },
   mutations: {
+    UPDATE_USER(state, user){
+      state.currentUser = user
+    }
   },
   actions: {
+    updateUser({commit}, user){
+      commit('UPDATE_USER', user)
+    }
   },
   modules: {
   }

@@ -1,12 +1,38 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <a v-if="currentUser" @click.prevent="logout">logOut</a>
+      <router-link v-else-if="currentUser === null" to="/login"
+        >Login</router-link
+      >
+      |
+      <router-link to="/home">Home</router-link>
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
+
+<script>
+import { mapState, mapActions } from "vuex";
+import firebase from "firebase";
+export default {
+  computed: {
+    ...mapState(["currentUser"]),
+  },
+  methods: {
+    ...mapActions(["updateUser"]),
+    logout() {
+      firebase
+        .auth()
+        .signOut()
+        .then(() => {
+          this.updateUser(null);
+          this.$router.push("/login");
+        });
+    },
+  },
+};
+</script>
 
 <style>
 #app {

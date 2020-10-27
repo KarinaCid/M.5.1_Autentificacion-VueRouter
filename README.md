@@ -1,4 +1,4 @@
-# autentificacion-vue-router
+# auth-demo
 
 ## Project setup
 ```
