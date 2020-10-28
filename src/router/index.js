@@ -9,7 +9,7 @@ const routes = [
     path: "/",
     name: "Login",
     component: Login,
-    alias: ["/Login"],
+    alias: ["/login"],
   },
   {
     path: "/home",

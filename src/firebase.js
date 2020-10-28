@@ -1,9 +1,9 @@
 export default {
-    apiKey: "AIzaSyB-9vKP4lBJfwnh1Zvef8FABowtt0CgX5Y",
-    authDomain: "desafio-7c0cd.firebaseapp.com",
-    databaseURL: "https://desafio-7c0cd.firebaseio.com",
-    projectId: "desafio-7c0cd",
-    storageBucket: "desafio-7c0cd.appspot.com",
-    messagingSenderId: "962856183498",
-    appId: "1:962856183498:web:3482e701b66247feb4f633"
+  apiKey: "AIzaSyCmsoORLZ1w5VyJ8I_Z7sSJfvRGd7lm7JU",
+  authDomain: "prueba-firebase-b7b80.firebaseapp.com",
+  databaseURL: "https://prueba-firebase-b7b80.firebaseio.com",
+  projectId: "prueba-firebase-b7b80",
+  storageBucket: "prueba-firebase-b7b80.appspot.com",
+  messagingSenderId: "845654911487",
+  appId: "1:845654911487:web:6cf62cf214137b705c5fca",
 };
