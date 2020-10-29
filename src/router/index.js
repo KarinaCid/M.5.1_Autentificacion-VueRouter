@@ -19,7 +19,7 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "Home" */ "../views/Home.vue"),
     meta:{
-      login:true
+      login: true
     }
   },
 ];

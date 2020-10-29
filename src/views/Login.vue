@@ -79,7 +79,7 @@ export default {
         })
         .catch( () => {
         this.alert.state = true
-        this.alert.text = 'Ingrese un usuario y/o contraseña correctos'
+        this.alert.text = 'Usuario y/o contraseña incorrectos'
         })
       } else{
         this.alert.state = true

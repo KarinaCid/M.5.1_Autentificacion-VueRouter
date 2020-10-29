@@ -1,12 +1,9 @@
 <template>
   <div id="app">
     <div id="nav">
-      <a v-if="currentUser" @click.prevent="logout">logOut</a>
-      <router-link v-else-if="currentUser === null" to="/login"
-        >Login</router-link
-      >
-      |
-      <router-link to="/home">Home</router-link>
+      <a v-if="currentUser" @click.prevent="logout">Logout</a> 
+      <router-link v-else-if="currentUser === null" to="/login">Login</router-link> |
+      <router-link to="/home">Home</router-link> |
     </div>
     <router-view />
   </div>
@@ -22,10 +19,7 @@ export default {
   methods: {
     ...mapActions(["updateUser"]),
     logout() {
-      firebase
-        .auth()
-        .signOut()
-        .then(() => {
+      firebase.auth().signOut().then(() => {
           this.updateUser(null);
           this.$router.push("/login");
         });
